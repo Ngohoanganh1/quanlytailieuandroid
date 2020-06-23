@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnThem"
+        android:orderInCategory="100"
+        android:title="Thêm"
+        android:icon="@android:drawable/ic_menu_add"
+        />
+    <item
+        android:id="@+id/btn"
+        android:orderInCategory="100"
+        android:title="sửa"
+        android:icon="@android:drawable/ic_menu_add"
+        />
+    <item
+        android:id="@+id/btnXoa"
+        android:orderInCategory="100"
+        android:title="xóa"
+        android:icon="@android:drawable/ic_menu_add"
+        />
+         </menu>
+

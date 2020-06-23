@@ -8,17 +8,55 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/listproduct"
-        android:layout_weight="1"
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-    </ListView>
-  <Button
-      android:text="Xóa"
-      android:id="@+id/delete"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
+        <Button
+            android:textSize="30dp"
+            android:text="Báo"
+            android:id="@+id/tvBAO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textSize="30dp"
+            android:text="Tạp chí"
+            android:id="@+id/tvtapchi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textSize="30dp"
+            android:text="SÁCH"
+            android:id="@+id/tvSach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

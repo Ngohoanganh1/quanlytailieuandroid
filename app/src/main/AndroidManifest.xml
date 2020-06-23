@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".adapter.TapchiActivity"></activity>
-        <activity android:name=".adapter.SachActivity" />
+        <activity android:name=".activity.TapChiActivity"></activity>
+        <activity android:name=".activity.BaoActivity" />
+        <activity android:name=".activity.ThemSachActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
