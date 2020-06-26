@@ -1,24 +1,24 @@
 package com.example.dulieu.model;
 
 public class Bao {
-     String ngayphathanh;
+     String Ngayphathanh;
      int id;
 
     public Bao(String ngayphathanh, int id) {
-        this.ngayphathanh = ngayphathanh;
+        Ngayphathanh = ngayphathanh;
         this.id = id;
     }
 
     public String getNgayphathanh() {
-        return ngayphathanh;
-    }
-
-    public void setNgayphathanh(String ngayphathanh) {
-        this.ngayphathanh = ngayphathanh;
+        return Ngayphathanh;
     }
 
     public int getId() {
         return id;
+    }
+
+    public void setNgayphathanh(String ngayphathanh) {
+        Ngayphathanh = ngayphathanh;
     }
 
     public void setId(int id) {

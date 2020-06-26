@@ -16,6 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dulieu.R;
+import com.example.dulieu.activity.SuaBaoActivity;
+import com.example.dulieu.activity.SuaSachActivity;
+import com.example.dulieu.activity.SuaTapChiActivity;
 import com.example.dulieu.activity.ThemSachActivity;
 import com.example.dulieu.model.Bao;
 import com.example.dulieu.model.Sach;
@@ -48,19 +51,18 @@ public class BaoAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-            View view;
         if (convertView == null) {
-            view = View.inflate(parent.getContext(), R.layout.item_bao, null);
-        } else view = convertView;
-
+            convertView = View.inflate(parent.getContext(), R.layout.item_bao, null);
+        }
         //Bind sữ liệu phần tử vào View
 
-        TextView txtNgaythang =  view.findViewById(R.id.tv_ngay_phat_hanh);
+        final TextView txtNgayphathanh = convertView.findViewById(R.id.tv_ngay_phat_hanh);
 
-        Button btnXoa = view.findViewById(R.id.bt_xoa_bao);
-        Button btnThem = view.findViewById(R.id.bt_them);
+        Button btnXoa = convertView.findViewById(R.id.bt_xoa_bao);
+        Button btnSua = convertView.findViewById(R.id.bt_sua_bao);
 
-        txtNgaythang.setText("Ngày phát hành :"+listBao.get(position).getNgayphathanh());
+        txtNgayphathanh.setText("Ngày phát hành :" + listBao.get(position).getNgayphathanh());
+
         btnXoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,15 +70,18 @@ public class BaoAdapter extends BaseAdapter {
                 notifyDataSetChanged();
             }
         });
-        btnThem.setOnClickListener(new View.OnClickListener() {
+        btnSua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listBao.add(new Bao("15/3/1222",listBao.size()+1));
-                notifyDataSetChanged();
+                Intent intent = new Intent(context, SuaBaoActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("SO_PHAT_HANH", ""+listBao.get(position).getNgayphathanh());
+                intent.putExtra("INDEX", position);
+                context.startActivity(intent);
             }
         });
 
-        return view;
+        return convertView;
     }
 }
 

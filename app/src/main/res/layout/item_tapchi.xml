@@ -36,10 +36,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true">
         <Button
-
             android:layout_marginTop="10dp"
-            android:id="@+id/btn_them_tapchi"
-            android:text="them"
+            android:id="@+id/btn_sua_tapchi"
+            android:text="sua"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button

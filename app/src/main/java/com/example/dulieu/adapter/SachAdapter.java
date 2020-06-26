@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dulieu.R;
+import com.example.dulieu.activity.SuaTapChiActivity;
 import com.example.dulieu.activity.ThemSachActivity;
 import com.example.dulieu.model.Bao;
 import com.example.dulieu.model.Sach;
@@ -49,23 +50,21 @@ public class SachAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        View view;
         if (convertView == null) {
-            view = View.inflate(parent.getContext(), R.layout.sach_item, null);
-        } else view = convertView;
-
+            convertView = View.inflate(parent.getContext(), R.layout.sach_item, null);
+        }
         //Bind sữ liệu phần tử vào View
 
-        TextView txtTentacgia =  view.findViewById(R.id.tv_tentac_gia);
-        TextView txtMasach = view.findViewById(R.id.tv_masach);
+        final TextView tentacgia = convertView.findViewById(R.id.tv_tentac_gia);
+        final TextView masach = convertView.findViewById(R.id.tv_masach);
 
-        Button btnXoa = view.findViewById(R.id.btn_xoasach);
-        Button btnThem = view.findViewById(R.id.btn_themsach);
+        Button btnSua = convertView.findViewById(R.id.btn_sua_sach);
+        Button btnXoa = convertView.findViewById(R.id.btn_xoasach);
+//them xóa item
+        tentacgia.setText("Tên tác giả :"+listSach.get(position).getTentacgia());
+        masach.setText("Mã sách :"+listSach.get(position).getMasach());
 
-        txtTentacgia.setText("Tên tác giả :"+listSach.get(position).getTentacgia());
-        txtMasach.setText("Mã sách :"+listSach.get(position).getMasach());
 
-        
         btnXoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,14 +72,18 @@ public class SachAdapter extends BaseAdapter {
                 notifyDataSetChanged();
             }
         });
-        btnThem.setOnClickListener(new View.OnClickListener() {
+        btnSua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listSach.add(new Sach("Ngô hoàng anh","05",listSach.size()+1));
-                notifyDataSetChanged();
+                Intent intent = new Intent(context, SuaTapChiActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("TEN TAC GIA", ""+listSach.get(position).getTentacgia());
+                intent.putExtra("MA SACH", ""+listSach.get(position).getMasach());
+                intent.putExtra("INDEX", position);
+                context.startActivity(intent);
             }
         });
 
-        return null;
+        return convertView;
     }
 }

@@ -32,8 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true">
         <Button
-            android:id="@+id/btn_themsach"
-            android:text="Thêm"
+            android:id="@+id/btn_sua_sach"
+            android:text="sửa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
