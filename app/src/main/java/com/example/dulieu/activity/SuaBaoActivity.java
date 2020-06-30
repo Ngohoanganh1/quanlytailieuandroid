@@ -54,7 +54,7 @@ public class SuaBaoActivity extends AppCompatActivity {
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.putExtra("SO_PHAT_HANH", "" + txt_ngay_phat_hanh.getText().toString());
                     intent.putExtra("Masp", edt_masanpham.getText().toString());
-                   intent.putExtra("soluong", edt_soluong.getText().toString());
+//                   intent.putExtra("soluong", edt_soluong.getText().toString());
 //                    intent.putExtra("dongia", edt_dongia.getText().toString());
 //                    intent.putExtra("loaisanpham", edt_loaisanpham.getText().toString());
                     intent.putExtra("POSITION", index);
