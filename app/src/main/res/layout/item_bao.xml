@@ -5,10 +5,12 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="227dp"
+        android:layout_height="294dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
         android:orientation="vertical">
 
 
@@ -18,10 +20,44 @@
             android:layout_height="35dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="Ngày Phát Hành"
+            android:text="Tên Sản phẩm"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tv_MaSp"
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Mã SP"
+            android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tv_soluong"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Số Lượng"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_dongia"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Đơn giá"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_hansudung"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Hạn sử dụng"
+            android:textSize="16sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_alignParentRight="true"

@@ -5,4 +5,9 @@
         android:icon="@android:drawable/ic_menu_add"
         android:orderInCategory="100"
         android:title="Thêm" />
+    <item
+        android:id="@+id/btn_sanphambanchay"
+        android:icon="@android:drawable/ic_menu_add"
+        android:orderInCategory="100"
+        android:title="Tinh Toán" />
 </menu>
